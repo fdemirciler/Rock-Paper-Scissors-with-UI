@@ -1,0 +1,1 @@
+As a part of the Odin Project assignment, I've written a script that takes user input and checks with random choices. The script then returns the count of user wins. 
