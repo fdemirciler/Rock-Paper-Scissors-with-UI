@@ -6,6 +6,14 @@ function computerPlay() {
 
 }
 
+function userPlay() {
+
+    let btnSelect = document.querySelectorAll('.choice');
+    btnSelect.forEach(element => {
+        element.addEventListener('click', console.log(element.textContent))
+    });
+}
+
 function toCapitalize(word) {
 
     let lower = word.toLowerCase();

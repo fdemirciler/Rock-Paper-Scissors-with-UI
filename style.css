@@ -1,0 +1,11 @@
+body {
+font-family: sans-serif;
+
+}
+
+.choice #choice  {
+    font-size: x-large;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
