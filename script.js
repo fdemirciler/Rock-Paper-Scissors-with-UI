@@ -72,8 +72,7 @@ function playRound(playerselection, computerSelection) {
     outcome.textContent = `You lose! ${c} beats ${p}.`
     computerNumber.textContent = computerScore += 1
   }
-
-  discloseResult()
+  discloseResult() 
 
 }
 
@@ -83,11 +82,11 @@ function discloseResult() {
 
   if (playerScore === 5) {
 
-    outcome.textContent = 'Congratulations! You won the game.'
+    outcome.textContent += ' Congratulations! You won the game.'
 
   } else if (computerScore === 5) {
 
-    outcome.textContent = 'Sorry! The machine won the game.'
+    outcome.textContent += ' Sorry! The machine won the game.'
 
   }
 }
