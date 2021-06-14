@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<title>Rock Paper Scissors</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
+	<body>
 
-<body>
-    <header>
+        <div class="page">
+			<h1 class="title">You against The Machine</h1>
+			<h4 class="title">Get the 5 points first and beat the machine</h4>
+            
+			<div class="score">
 
-        <h1>Rock Paper Scissors Game</h1>
+				<ul class = 'scoreNumber'>
+					<li id = 'playerNumber'>0</li>
+					<li id = 'computerNumber'>0</li>
+				</ul>
 
-    </header>
+				<ul class = 'scoreTable'>
+					<li id = 'scorePlayer'>You</li>
+					<li id = 'scoreComputer'>Machine</li>
+				</ul>
+				
+				<p id = 'outcome' ></p>
 
-    <div class="result">result</div>
+			</div>
 
-    <div class='ctn-score'>score
+			<div class="images">
 
-        <div id="score-user"></div>
-        <div id="score"></div>
-        <div id="score-robot"></div>
+                
+                <!-- images from: https://www.vecteezy.com/free-vector/rock Rock Vectors by Vecteezy -->
 
-    </div>
+				<input type="image" id = 'Rock' src="img/rock.png" onclick="play(this.id)">
+				<input type="image" id = 'Paper' src="img/paper.png" onclick="play(this.id)" >
+				<input type="image" id = 'Scissors' src="img/scissors.png" onclick="play(this.id)" >
+			
+                            
+            </div>
 
-    <div class="selection">please select</div>
+			<input type="button" value = 'Replay' id = 'reset' onclick="window.location.reload()">
 
-    <div class='choice'>choice
-
-        <button onclick=userPlay() id="choice">Rockiiii</button>
-        <button onclick=userPlay() id="choice">Paper</button>
-        <button onclick=userPlay() id="choice">Scissors</button>
-
-    </div>
-
-</body>
-
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>

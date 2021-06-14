@@ -1,74 +1,93 @@
+// Set initial scores
+let playerScore = 0;
+let computerScore = 0;
+
+// Get elements
+
+const playerNumber = document.getElementById("playerNumber");
+const computerNumber = document.getElementById("computerNumber");
+const outcome = document.getElementById("outcome");
+
+
+// Random computer play
+
 function computerPlay() {
 
-    let a = ['Rock', 'Paper', 'Scissors']
+  let a = ['Rock', 'Paper', 'Scissors']
 
-    return a[Math.floor(Math.random() * a.length)]
+  return a[Math.floor(Math.random() * a.length)]
 
 }
 
-function userPlay() {
 
-    let btnSelect = document.querySelectorAll('.choice');
-    btnSelect.forEach(element => {
-        element.addEventListener('click', console.log(element.textContent))
-    });
-}
+// word capitalization
 
 function toCapitalize(word) {
 
-    let lower = word.toLowerCase();
-    let first = lower.charAt(0).toUpperCase();
-    let remaining = lower.slice(1)
-    return first + remaining
+  let lower = word.toLowerCase();
+  let first = lower.charAt(0).toUpperCase();
+  let remaining = lower.slice(1)
+  return first + remaining
 
-}
+};
+
+function play(id) {
+
+  playRound(id, computerPlay())
+
+};
+
+// main play
 
 function playRound(playerselection, computerSelection) {
 
-    let p = toCapitalize(playerselection)
-    let c = toCapitalize(computerSelection)
+  let p = toCapitalize(playerselection)
+  let c = toCapitalize(computerSelection)
 
-    if (p === 'Paper' &&
-        c === 'Rock') {
 
-        return 'You win! Paper beats Rock.'
+  if (p === 'Paper' &&
+    c === 'Rock') {
 
-    } else if (p === 'Rock' &&
-        c === 'Scissors') {
+    outcome.textContent = 'You win! Paper beats Rock.'
+    playerNumber.textContent = playerScore += 1
 
-        return 'You win! Rock beats Scissors.'
+  } else if (p === 'Rock' &&
+    c === 'Scissors') {
 
-    } else if (p === 'Scissors' &&
-        c === 'Paper') {
+    outcome.textContent = 'You win! Rock beats Scissors.'
+    playerNumber.textContent = playerScore += 1
 
-        return 'You win! Scissors beats Paper.'
+  } else if (p === 'Scissors' &&
+    c === 'Paper') {
 
-    } else if (p === c) {
+    outcome.textContent = 'You win! Scissors beats Paper.'
+    playerNumber.textContent = playerScore += 1
 
-        return 'Same choice. Let\'s try again'
-    }
+  } else if (p === c) {
 
-    return `You lose! ${c} beats ${p}`
+    outcome.textContent = 'Same choice. Let\'s try again.'
+
+  } else {
+
+    outcome.textContent = `You lose! ${c} beats ${p}.`
+    computerNumber.textContent = computerScore += 1
+  }
+
+  discloseResult()
 
 }
 
-function game() {
+// Check which player gets 5 points first.
 
-    let counter = 0
+function discloseResult() {
 
-    for (let i = 1; i < 6; i++) {
+  if (playerScore === 5) {
 
-        let userInput = toCapitalize(prompt('Please enter your choice.'))
+    outcome.textContent = 'Congratulations! You won the game.'
 
-        let result = playRound(userInput, computerPlay())
+  } else if (computerScore === 5) {
 
-        if (result.includes('win')) {
+    outcome.textContent = 'Sorry! The machine won the game.'
 
-            counter += 1
-
-        }
-    }
-
-    return `You won ${counter} out of 5 rounds`
-
+  }
 }
