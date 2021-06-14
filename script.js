@@ -65,7 +65,7 @@ function playRound(playerselection, computerSelection) {
 
   } else if (p === c) {
 
-    outcome.textContent = 'Same choice. Let\'s try again.'
+    outcome.textContent = 'Same choice. Try again.'
 
   } else {
 

@@ -44,6 +44,7 @@ input {
 
 .button:hover {
     position: relative;
+    
 
 }
 
@@ -100,4 +101,34 @@ input {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+
+
+input[type=button] {
+
+    position: absolute;
+    bottom: 70px;
+    right: 75px;
+    margin: 0px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 0;
+    width: 100px;
+    height: 100px;
+
+    text-decoration: none;
+    color: wheat;
+    background: rgb(202, 124, 202);
+    font-size: medium;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+}
+
+input[type=button]:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    cursor: pointer;
 }
