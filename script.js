@@ -69,10 +69,10 @@ function playRound(playerselection, computerSelection) {
 
   } else {
 
-    outcome.textContent = `You lose! ${c} beats ${p}.`
+    outcome.textContent = `You lose! ${c} beats ${p}.`;
     computerNumber.textContent = computerScore += 1
   }
-  discloseResult() 
+  discloseResult()
 
 }
 

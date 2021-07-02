@@ -1,6 +1,6 @@
 html,
 body {
-    background: rgb(236, 190, 236);
+    background: rgb(247, 242, 247);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -63,8 +63,9 @@ input {
 
 .scoreNumber li {
 
-    margin-inline: 100px;
+    margin-inline: 150px;
     font-size: 70px;
+    
 }
 
 .scoreTable {
@@ -81,7 +82,13 @@ input {
 
     margin-inline: 90px;
     font-size: large;
+    color: white;
+    background-color:rgb(194, 116, 236);
+    padding-left: 50px;
+    padding-right: 50px;
+
 }
+
 
 #outcome {
     position: flex;
@@ -118,13 +125,13 @@ input[type=button] {
     height: 100px;
 
     text-decoration: none;
-    color: wheat;
+    color: white;
     background: rgb(202, 124, 202);
     font-size: medium;
     font-weight: bold;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+    
 }
 
 input[type=button]:hover {
